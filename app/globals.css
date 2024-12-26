@@ -2,16 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: #0F0721;    /* Dark indigo base */
+  --foreground: #E6E1F9;    /* Light text */
+  --primary: #6D4AFF;       /* Main purple-indigo */
+  --surface: #1A1139;       /* Slightly elevated surface */
+  --muted: #9CA3AF;         /* Subdued text */
 }
 
 body {
