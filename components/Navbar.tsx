@@ -12,7 +12,8 @@ const Navbar = async () => {
     <header className="backdrop-blur-md bg-gradient-to-b from-black/90 to-black/80 sticky top-0 z-50 border-b border-gray-800/60 shadow-lg shadow-black/20">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-        <div className="transform transition-all duration-300">
+          
+          <div className="transform transition-all duration-300">
             <Link href="/" className="flex items-center group relative">
               <div className="font-extrabold text-4xl relative  text-transparent m-2 bg-clip-text bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 hover:from-indigo-400 hover:via-purple-500 hover:to-pink-500 transition-all duration-700">
                 Entepreneurr
