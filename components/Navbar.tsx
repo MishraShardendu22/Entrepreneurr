@@ -1,6 +1,6 @@
 import { auth, signIn, signOut } from "@/auth"
 import Link from "next/link"
-import { LogOut, UserPlus, PlusCircle } from "lucide-react"
+import { LogOut, UserPlus, PlusCircle, Camera } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
@@ -12,7 +12,7 @@ const Navbar = async () => {
     <header className="backdrop-blur-md bg-gradient-to-b from-black/90 to-black/80 sticky top-0 z-50 border-b border-gray-800/60 shadow-lg shadow-black/20">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          
+
           <div className="transform transition-all duration-300">
             <Link href="/" className="flex items-center group relative">
               <div className="font-extrabold text-4xl relative  text-transparent m-2 bg-clip-text bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 hover:from-indigo-400 hover:via-purple-500 hover:to-pink-500 transition-all duration-700">
@@ -25,6 +25,29 @@ const Navbar = async () => {
           <div className="flex items-center gap-4">
             {session && session?.user ? (
               <>
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Link href="/image">
+                        <Button 
+                          variant="ghost" 
+                          size="sm"
+                          className="group relative px-4 py-2 hover:bg-gradient-to-r hover:from-gray-800/40 hover:to-gray-900/40 rounded-lg transition-all duration-300"
+                        >
+                          <Camera className="h-5 w-5 text-gray-400 group-hover:text-blue-400 transform group-hover:scale-110 transition-all" />
+                          <span className="ml-2 hidden text-gray-400 group-hover:text-blue-400 font-medium tracking-wide transition-colors sm:block">
+                            Picture You&#39;re StartUp
+                          </span>
+                          <div className="absolute inset-0 rounded-lg ring-1 ring-white/10 group-hover:ring-blue-500/20 transition-all duration-300" />
+                        </Button>
+                      </Link>
+                    </TooltipTrigger>
+                    <TooltipContent sideOffset={4} className="bg-gray-900/95 text-gray-200 border border-gray-800 shadow-xl">
+                      Get A look of you&#39;re startup !!
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+
                 <TooltipProvider>
                   <Tooltip>
                     <TooltipTrigger asChild>
@@ -62,7 +85,7 @@ const Navbar = async () => {
                           size="sm"
                           className="group relative px-4 py-2 hover:bg-gradient-to-r hover:from-gray-800/40 hover:to-gray-900/40 rounded-lg transition-all duration-300"
                         >
-                          <LogOut className="h-5 w-5 text-gray-400 group-hover:text-red-400 transform group-hover:scale-110 group-hover:-rotate-12 transition-all" />
+                          <LogOut className="h-5 w-5 text-gray-400 group-hover:text-red-400 transform group-hover:scale-110 transition-all" />
                           <span className="ml-2 hidden text-gray-400 group-hover:text-red-400 font-medium tracking-wide transition-colors sm:block">
                             Logout
                           </span>
