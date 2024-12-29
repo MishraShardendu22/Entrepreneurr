@@ -1,8 +1,8 @@
 'use client'
-import React from 'react';
 import { CardContent } from "@/components/ui/card";
 import { Rocket, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
+
 
 const Heading = () => {
 
@@ -104,7 +104,6 @@ const Heading = () => {
         >
           Unearth the visionary startup that turns your biggest challenges into groundbreaking opportunities by searching below !! 
         </motion.p>
-      
       </CardContent>
     </div>
   );
