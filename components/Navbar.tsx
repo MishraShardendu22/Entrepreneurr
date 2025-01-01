@@ -1,6 +1,6 @@
 import { auth, signIn, signOut } from "@/auth"
 import Link from "next/link"
-import { LogOut, UserPlus, PlusCircle } from "lucide-react"
+import { LogOut, UserPlus } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
@@ -25,30 +25,6 @@ const Navbar = async () => {
           <div className="flex items-center gap-4">
             {session && session?.user ? (
               <>
-
-
-                <TooltipProvider>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <Link href="/startup/create">
-                        <Button 
-                          variant="ghost" 
-                          size="sm"
-                          className="group relative px-4 py-2 hover:bg-gradient-to-r hover:from-gray-800/40 hover:to-gray-900/40 rounded-lg transition-all duration-300"
-                        >
-                          <PlusCircle className="h-5 w-5 text-gray-400 group-hover:text-blue-400 transform group-hover:scale-110 transition-all" />
-                          <span className="ml-2 hidden text-gray-400 group-hover:text-blue-400 font-medium tracking-wide transition-colors sm:block">
-                            Create
-                          </span>
-                          <div className="absolute inset-0 rounded-lg ring-1 ring-white/10 group-hover:ring-blue-500/20 transition-all duration-300" />
-                        </Button>
-                      </Link>
-                    </TooltipTrigger>
-                    <TooltipContent sideOffset={4} className="bg-gray-900/95 text-gray-200 border border-gray-800 shadow-xl">
-                      Create Startup
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
 
                 <form
                   action={async () => {

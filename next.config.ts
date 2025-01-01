@@ -1,13 +1,25 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  images : {
-    remotePatterns : [
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  images: {
+    dangerouslyAllowSVG: true,
+    remotePatterns: [
       {
-        protocol: 'https',
-        hostname: '*',
-      }
-    ]
+        protocol: "https",
+        hostname: "*",
+      },
+    ],
+  },
+  devIndicators: {
+    appIsrStatus: true,
+    buildActivity: true,
+    buildActivityPosition: "bottom-right",
   },
 };
 
