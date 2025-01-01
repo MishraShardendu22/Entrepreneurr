@@ -1,4 +1,5 @@
-# (Entepreneurr)[https://entrepreneurr.vercel.app/]  
+# [Entepreneurr](https://entrepreneurr.vercel.app/)
+
 
 Entrepreneurr is a platform designed to help individuals showcase their startups and connect with like-minded entrepreneurs. Built using **Next.js**, **Sanity.io**, **Tailwind CSS**, and **ShadCN**, it offers a seamless, visually stunning, and responsive user experience.  
 
